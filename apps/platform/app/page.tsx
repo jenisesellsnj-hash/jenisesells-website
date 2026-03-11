@@ -50,6 +50,10 @@ export default function LandingPage() {
           By continuing, you agree to our{" "}
           <Link href="/terms" className="underline hover:text-gray-400 transition-colors">
             Terms of Service
+          </Link>{" "}
+          and{" "}
+          <Link href="/privacy" className="underline hover:text-gray-400 transition-colors">
+            Privacy Policy
           </Link>
           .
         </p>

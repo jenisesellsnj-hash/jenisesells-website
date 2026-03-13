@@ -138,17 +138,92 @@ footer .footer-contact { font-size: 14px; color: #C8E6C9; margin-bottom: 5px; }
 footer .footer-areas { font-size: 13px; color: #81C784; margin-top: 15px; }
 footer .disclaimer { font-size: 11px; color: #66BB6A; margin-top: 20px; max-width: 700px; margin-left: auto; margin-right: auto; }
 
-/* RESPONSIVE */
+/* HAMBURGER MENU */
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 1100; }
+.hamburger span { display: block; width: 26px; height: 3px; background: #C8A951; margin: 5px 0; border-radius: 3px; transition: all 0.3s ease; }
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+/* MOBILE DRAWER OVERLAY */
+.nav-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1050; opacity: 0; transition: opacity 0.3s ease; }
+.nav-overlay.active { display: block; opacity: 1; }
+
+/* MOBILE DRAWER */
+.mobile-drawer { position: fixed; top: 0; right: -300px; width: 280px; height: 100%; background: #1B5E20; z-index: 1060; padding: 80px 30px 30px; transition: right 0.3s ease; overflow-y: auto; box-shadow: -4px 0 20px rgba(0,0,0,0.3); }
+.mobile-drawer.active { right: 0; }
+.mobile-drawer a { display: block; color: white; font-size: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.15); text-decoration: none; }
+.mobile-drawer a:hover { color: #C8A951; }
+.mobile-drawer .drawer-phone { display: flex; align-items: center; gap: 10px; background: #C8A951; color: #1B5E20; padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 16px; margin-top: 20px; border-bottom: none; text-align: center; justify-content: center; }
+.mobile-drawer .drawer-phone svg { flex-shrink: 0; }
+.mobile-drawer .drawer-office { display: flex; align-items: center; gap: 10px; color: #C8A951; padding: 12px 0; font-size: 14px; border-bottom: none; }
+.mobile-drawer .drawer-email { display: flex; align-items: center; gap: 10px; color: white; padding: 12px 0; font-size: 14px; }
+
+/* RESPONSIVE - TABLET */
 @media (max-width: 768px) {
+  .hamburger { display: block; }
   nav { padding: 10px 15px; }
-  nav .logo-area img { height: 36px; }
-  .hero { padding: 50px 20px; gap: 30px; }
-  .hero-text h1 { font-size: 30px; }
-  .hero-img { width: 220px; height: 220px; }
-  .stats-bar { gap: 20px; padding: 20px; }
-  .stat-item .num { font-size: 24px; }
-  section { padding: 50px 20px; }
-  .steps { gap: 25px; }
+  nav .logo-area img { height: 50px; }
+  nav .logo-area span { font-size: 12px; }
+  nav .nav-contact { display: none; }
+  .hero { padding: 40px 20px; gap: 20px; flex-direction: column; text-align: center; margin-top: 70px; }
+  .hero-text h1 { font-size: 28px; }
+  .hero-text p { font-size: 14px; }
+  .hero-img { width: 180px; height: 180px; }
+  .stats-bar { gap: 15px; padding: 15px 10px; flex-wrap: wrap; }
+  .stat-item .num { font-size: 22px; }
+  .stat-item .label { font-size: 11px; }
+  section { padding: 40px 20px; }
+  .section-title { font-size: 26px; }
+  .section-subtitle { font-size: 14px; margin-bottom: 30px; }
+  .services-grid { grid-template-columns: 1fr; gap: 15px; }
+  .service-card { padding: 20px; }
+  .service-card h3 { font-size: 17px; }
+  .steps { gap: 20px; }
+  .step { width: 100%; max-width: 280px; }
+  .step .circle { width: 50px; height: 50px; font-size: 20px; }
+  .sold-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .sold-card { padding: 10px; }
+  .sold-card img { height: 140px !important; }
+  .sold-card .price { font-size: 18px; }
+  .sold-card .address { font-size: 12px; }
+  .testimonials-grid { grid-template-columns: 1fr; gap: 15px; }
+  .cma-highlight { padding: 40px 20px; }
+  .cma-inner h2 { font-size: 26px; }
+  .form-container { padding: 25px 20px; }
+  .about-section { gap: 25px; }
+  .about-img { width: 180px; height: 180px; }
+  .about-text h2 { font-size: 24px; }
+  footer { padding: 30px 20px; }
+  footer .footer-name { font-size: 20px; }
+}
+
+/* RESPONSIVE - MOBILE */
+@media (max-width: 480px) {
+  nav .logo-area img { height: 44px; }
+  nav .logo-area span { font-size: 11px; letter-spacing: 0.5px; }
+  .hero { padding: 30px 15px; margin-top: 64px; }
+  .hero-text h1 { font-size: 24px; }
+  .hero-text .tagline { font-size: 14px; }
+  .hero-text p { font-size: 13px; }
+  .hero-img { width: 150px; height: 150px; }
+  .cta-button { font-size: 15px; padding: 14px 28px; }
+  .stats-bar { gap: 10px; padding: 12px 8px; }
+  .stat-item .num { font-size: 18px; }
+  .stat-item .label { font-size: 10px; }
+  section { padding: 30px 15px; }
+  .section-title { font-size: 22px; }
+  .sold-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .sold-card img { height: 120px !important; border-radius: 6px 6px 0 0 !important; }
+  .sold-card .price { font-size: 16px; }
+  .sold-card .sold-badge { font-size: 10px; padding: 2px 8px; }
+  .form-container { padding: 20px 15px; }
+  .form-container h3 { font-size: 20px; }
+  .form-row { flex-direction: column; gap: 0; }
+  .about-img { width: 150px; height: 150px; }
+  .about-text { text-align: center; }
+  .about-text .credentials { justify-content: center; }
+  footer .footer-contact { font-size: 13px; }
 }
 </style>
 </head>
@@ -162,9 +237,34 @@ footer .disclaimer { font-size: 11px; color: #66BB6A; margin-top: 20px; max-widt
   </div>
   <div class="nav-contact">
     <a href="mailto:jenisesellsnj@gmail.com">jenisesellsnj@gmail.com</a>
-    <a href="tel:3473935993" class="phone">Cell: (347) 393-5993</a> <span style="color:#ccc;">|</span> <a href="tel:7322512500" class="phone" style="margin-left:0;">Office: (732) 251-2500 ext 714</a>
+    <a href="tel:3473935993" class="phone"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(347) 393-5993</a> <span style="color:#ccc;">|</span> <a href="tel:7322512500" class="phone" style="margin-left:0;">Office: (732) 251-2500 ext 714</a>
   </div>
-</nav>
+
+    <button class="hamburger" onclick="toggleDrawer()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-overlay" onclick="toggleDrawer()"></div>
+  <div class="mobile-drawer">
+    <a href="#services" onclick="toggleDrawer()">Why Choose Jenise</a>
+    <a href="#how-it-works" onclick="toggleDrawer()">How It Works</a>
+    <a href="#sold" onclick="toggleDrawer()">Recent Sales</a>
+    <a href="#testimonials" onclick="toggleDrawer()">Testimonials</a>
+    <a href="#cma-form" onclick="toggleDrawer()">Get Your Home Value</a>
+    <a href="#about" onclick="toggleDrawer()">About</a>
+    <a href="tel:3473935993" class="drawer-phone">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      (347) 393-5993
+    </a>
+    <a href="tel:7322512500" class="drawer-office">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Office: (732) 251-2500 ext 714
+    </a>
+    <a class="drawer-email">
+      jenisesellsnj at gmail.com
+    </a>
+  </div>
+
 
 <!-- HERO -->
 <div class="hero">
@@ -637,5 +737,14 @@ document.getElementById('cmaForm').addEventListener('submit', function(e) {
 });
 </script>
 
+
+<script>
+function toggleDrawer() {
+  document.querySelector('.hamburger').classList.toggle('active');
+  document.querySelector('.mobile-drawer').classList.toggle('active');
+  document.querySelector('.nav-overlay').classList.toggle('active');
+  document.body.style.overflow = document.querySelector('.mobile-drawer').classList.contains('active') ? 'hidden' : '';
+}
+</script>
 </body>
 </html>

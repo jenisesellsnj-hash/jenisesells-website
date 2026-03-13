@@ -60,6 +60,47 @@ footer a { color: #C8A951; }
   .content { padding: 40px 20px; }
   .agent-bar { flex-direction: column; text-align: center; }
 }
+
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 1100; }
+.hamburger span { display: block; width: 26px; height: 3px; background: #C8A951; margin: 5px 0; border-radius: 3px; transition: all 0.3s ease; }
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+.nav-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1050; opacity: 0; transition: opacity 0.3s ease; }
+.nav-overlay.active { display: block; opacity: 1; }
+.mobile-drawer { position: fixed; top: 0; right: -300px; width: 280px; height: 100%; background: #1B5E20; z-index: 1060; padding: 80px 30px 30px; transition: right 0.3s ease; overflow-y: auto; box-shadow: -4px 0 20px rgba(0,0,0,0.3); }
+.mobile-drawer.active { right: 0; }
+.mobile-drawer a { display: block; color: white; font-size: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.15); text-decoration: none; }
+.mobile-drawer a:hover { color: #C8A951; }
+.mobile-drawer .drawer-phone { display: flex; align-items: center; gap: 10px; background: #C8A951; color: #1B5E20; padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 16px; margin-top: 20px; border-bottom: none; justify-content: center; }
+.mobile-drawer .drawer-office { display: flex; align-items: center; gap: 10px; color: #C8A951; padding: 12px 0; font-size: 14px; border-bottom: none; }
+.mobile-drawer .drawer-email { display: flex; align-items: center; gap: 10px; color: white; padding: 12px 0; font-size: 14px; }
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+  nav { padding: 10px 15px; }
+  nav .logo-area img { height: 50px; }
+  nav .logo-area span { font-size: 12px; }
+  nav .nav-contact { display: none; }
+  .hero { padding: 40px 20px; margin-top: 70px; }
+  .hero h1 { font-size: 26px; }
+  .hero p { font-size: 14px; }
+  .content { padding: 30px 20px; }
+  .content h2 { font-size: 24px; }
+  .market-box { padding: 20px; margin: 20px 0; }
+  .agent-bar { padding: 20px; gap: 15px; justify-content: center; text-align: center; }
+  .agent-bar img { width: 80px; height: 80px; }
+  .cta-section { padding: 40px 20px; }
+  .cta-section h2 { font-size: 24px; }
+  footer { padding: 25px 15px; }
+}
+@media (max-width: 480px) {
+  nav .logo-area img { height: 44px; }
+  nav .logo-area span { font-size: 11px; }
+  .hero { padding: 30px 15px; margin-top: 64px; }
+  .hero h1 { font-size: 22px; }
+  .content { padding: 25px 15px; }
+  .cta-button { font-size: 15px; padding: 14px 28px; }
+}
 </style>
 </head>
 <body>
@@ -70,9 +111,19 @@ footer a { color: #C8A951; }
   </div>
   <div class="nav-contact">
     <a href="mailto:jenisesellsnj@gmail.com">jenisesellsnj@gmail.com</a>
-    <a href="tel:3473935993" class="phone">Cell: (347) 393-5993</a> <span style="color:#ccc;">|</span> <a href="tel:7322512500" class="phone" style="margin-left:0;">Office: (732) 251-2500 ext 714</a>
+    <a href="tel:3473935993" class="phone"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(347) 393-5993</a> <span style="color:#ccc;">|</span> <a href="tel:7322512500" class="phone" style="margin-left:0;">Office: (732) 251-2500 ext 714</a>
   </div>
-</nav>
+
+    <button class="hamburger" onclick="toggleDrawer()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav-overlay" onclick="toggleDrawer()"></div>
+  <div class="mobile-drawer">
+    <a href="tel:3473935993" class="drawer-phone"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> (347) 393-5993</a>
+    <a href="tel:7322512500" class="drawer-office"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Office: (732) 251-2500 ext 714</a>
+    <a class="drawer-email">jenisesellsnj at gmail.com</a>
+    <a href="https://jenisesellsnj.com">Home</a>
+  </div>
+
 
 <div class="hero">
   <h1>Selling Your Home in <span class="gold">East Brunswick, NJ</span>?</h1>
@@ -128,5 +179,14 @@ footer a { color: #C8A951; }
   <p style="margin-top:8px;">Serving Middlesex, Monmouth &amp; Ocean Counties, NJ | <a href="index.html">Back to Home</a></p>
   <p style="margin-top:10px; color: #81C784; font-size: 11px;">The information on this website is for general informational purposes only. Equal Housing Opportunity.</p>
 </footer>
+
+<script>
+function toggleDrawer() {
+  document.querySelector('.hamburger').classList.toggle('active');
+  document.querySelector('.mobile-drawer').classList.toggle('active');
+  document.querySelector('.nav-overlay').classList.toggle('active');
+  document.body.style.overflow = document.querySelector('.mobile-drawer').classList.contains('active') ? 'hidden' : '';
+}
+</script>
 </body>
 </html>

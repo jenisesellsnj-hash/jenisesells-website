@@ -61,7 +61,12 @@ footer a { color: #C8A951; }
   .agent-bar { flex-direction: column; text-align: center; }
 }
 
-.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 1100; }
+/* MOBILE CALL BUTTON */
+    .mobile-call-btn { display: none; align-items: center; gap: 6px; background: #C8A951; color: #1B5E20; padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 13px; text-decoration: none; white-space: nowrap; }
+    .mobile-call-btn svg { width: 16px !important; height: 16px !important; fill: #1B5E20 !important; flex-shrink: 0; max-width: 16px !important; max-height: 16px !important; }
+    @media (max-width: 768px) { .mobile-call-btn { display: flex; } }
+
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 1100; }
 .hamburger span { display: block; width: 26px; height: 3px; background: #C8A951; margin: 5px 0; border-radius: 3px; transition: all 0.3s ease; }
 .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
 .hamburger.active span:nth-child(2) { opacity: 0; }

@@ -7,7 +7,7 @@
 <meta name="description" content="3 bed, 1 bath home for sale at 299 Paderewski Ave, Perth Amboy, NJ 08861. Move-in ready home renovated in 2021-2022, with an addition and walkout basement. Listed by Jenise Buckalew, Green Light Realty LLC.">
 <meta property="og:title" content="299 Paderewski Ave, Perth Amboy NJ - $490,000">
 <meta property="og:description" content="Move-in ready home renovated in 2021-2022, with an addition and walkout basement.">
-<meta property="og:image" content="https://pi.movoto.com/p/456/2707483R_0_B3aaEa_p.webp">
+<meta property="og:image" content="https://jenisesellsnj.com/photos/299-paderewski-ave-01-front.jpg">
 <link rel="stylesheet" href="listings.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
     </div>
     <div class="l-price">$490,000</div>
   </div>
-  <div class="l-gallery-main"><img id="lMain" src="https://pi.movoto.com/p/456/2707483R_0_B3aaEa_p.webp" alt="299 Paderewski Ave, Perth Amboy, NJ 08861"></div><div class="l-thumbs"><button type="button" class="on" aria-label="Photo 1"><img src="https://pi.movoto.com/p/456/2707483R_0_B3aaEa_p.webp" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 2"><img src="https://pi.movoto.com/p/456/2707483R_0_EFV3qz_p.webp" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 3"><img src="https://pi.movoto.com/p/456/2707483R_0_rur7r6_p.webp" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 4"><img src="https://pi.movoto.com/p/456/2707483R_0_AMvijA_p.webp" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 5"><img src="https://pi.movoto.com/p/456/2707483R_0_iMniqa_p.webp" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 6"><img src="https://pi.movoto.com/p/456/2707483R_0_QJ3ibv_p.webp" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 7"><img src="https://pi.movoto.com/p/456/2707483R_0_YNjvZb_p.webp" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 8"><img src="https://pi.movoto.com/p/456/2707483R_0_bQjFbQ_p.webp" alt="" loading="lazy"></button></div><p class="l-note">Some photos are virtually staged. Original photos are included for comparison.</p>
+  <div class="l-gallery-main"><img id="lMain" src="photos/299-paderewski-ave-01-front.jpg" alt="299 Paderewski Ave, Perth Amboy, NJ 08861"><span id="lStaged" class="l-staged" hidden>Virtually staged</span></div><div class="l-thumbs"><button type="button" class="on" aria-label="Photo 1"><img src="photos/299-paderewski-ave-01-front.jpg" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 2" data-staged="1"><img src="photos/299-paderewski-ave-02-living-room-staged.jpg" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 3"><img src="photos/299-paderewski-ave-03-living-room.jpg" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 4"><img src="photos/299-paderewski-ave-04-living-room-kitchen.jpg" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 5"><img src="photos/299-paderewski-ave-05-living-room-entry.jpg" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 6"><img src="photos/299-paderewski-ave-06-kitchen.jpg" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 7"><img src="photos/299-paderewski-ave-07-foyer-stairs.jpg" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 8" data-staged="1"><img src="photos/299-paderewski-ave-08-bedroom-1-staged.jpg" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 9" data-staged="1"><img src="photos/299-paderewski-ave-09-bedroom-2-staged.jpg" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 10" data-staged="1"><img src="photos/299-paderewski-ave-10-bedroom-3-office-staged.jpg" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 11" data-staged="1"><img src="photos/299-paderewski-ave-11-basement-staged.jpg" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 12" data-staged="1"><img src="photos/299-paderewski-ave-12-basement-2-staged.jpg" alt="" loading="lazy"></button><button type="button" class="" aria-label="Photo 13"><img src="photos/299-paderewski-ave-13-back-patio.jpg" alt="" loading="lazy"></button></div><p class="l-note">Some photos are virtually staged. Original photos are included for comparison.</p>
   <div class="l-chips"><span>3 Beds</span><span>1 Full Bath</span><span>1,237 Sq Ft</span><span>Walkout Basement</span></div>
   <div class="l-cols">
     <div class="l-main">
@@ -83,6 +83,7 @@
       var m = document.getElementById('lMain'); if (!m) return;
       m.src = im.src;
       thumbs.forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on');
+      var sb = document.getElementById('lStaged'); if (sb) sb.hidden = !b.dataset.staged;
     });
   });
   var form = document.getElementById('showingForm'), msg = document.getElementById('lMsg');

@@ -19,6 +19,9 @@ a { color: inherit; text-decoration: none; }
 .l-head .l-town { font-size: 17px; color: #555; }
 .l-price { font-size: 36px; font-weight: 800; color: #2E7D32; line-height: 1; }
 .l-gallery-main { width: 100%; aspect-ratio: 16 / 10; max-height: 600px; border-radius: 14px; overflow: hidden; background: linear-gradient(135deg, #2E7D32, #1B5E20); display: flex; align-items: center; justify-content: center; }
+.l-gallery-main { position: relative; }
+.l-staged { position: absolute; left: 14px; bottom: 14px; background: rgba(0,0,0,0.65); color: #fff; font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 6px; }
+.l-staged[hidden] { display: none; }
 .l-gallery-main img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .l-ph { color: #C8A951; font-weight: 700; font-size: 18px; letter-spacing: 1px; text-align: center; padding: 20px; }
 .l-thumbs { display: flex; gap: 8px; margin-top: 10px; overflow-x: auto; padding-bottom: 4px; }

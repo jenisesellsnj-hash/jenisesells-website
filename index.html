@@ -251,6 +251,9 @@ footer .disclaimer { font-size: 11px; color: #66BB6A; margin-top: 20px; max-widt
 .listing-card .lc-teaser { font-size: 14px; color: #555; flex: 1; }
 .listing-card .lc-link { margin-top: 14px; color: #2E7D32; font-weight: 700; font-size: 14px; }
 @media (max-width: 480px) { .listing-card .lc-photo { height: 200px; } }
+.sold-card .sold-photo-ph { height: 180px; border-radius: 8px 8px 0 0; background: linear-gradient(135deg, #2E7D32, #1B5E20); color: #C8A951; font-size: 64px; display: flex; align-items: center; justify-content: center; margin-bottom: 6px; }
+@media (max-width: 768px) { .sold-card .sold-photo-ph { height: 140px; } }
+@media (max-width: 480px) { .sold-card .sold-photo-ph { height: 120px; } }
 </style>
 </head>
 <body>
@@ -427,6 +430,24 @@ footer .disclaimer { font-size: 11px; color: #66BB6A; margin-top: 20px; max-widt
   <h2 class="section-title">Recently Sold by Jenise</h2>
   <p class="section-subtitle">Real results from the Zillow profile — verified sales.</p>
   <div class="sold-grid">
+    <div class="sold-card">
+      <div class="sold-photo-ph" role="img" aria-label="317 Alpine St, Forked River, NJ">&#8962;</div>
+      <div class="sold-badge">SOLD</div>
+      <div class="price">$539,900</div>
+      <div class="address">317 Alpine St<br>Forked River, NJ</div>
+    </div>
+    <div class="sold-card">
+      <div class="sold-photo-ph" role="img" aria-label="3 S Minnisink Ave, Sayreville, NJ">&#8962;</div>
+      <div class="sold-badge">SOLD</div>
+      <div class="price">$610,000</div>
+      <div class="address">3 S Minnisink Ave<br>Sayreville, NJ</div>
+    </div>
+    <div class="sold-card">
+      <div class="sold-photo-ph" role="img" aria-label="12 Ann Ct, Hazlet, NJ">&#8962;</div>
+      <div class="sold-badge">SOLD</div>
+      <div class="price">$530,000</div>
+      <div class="address">12 Ann Ct<br>Hazlet, NJ</div>
+    </div>
     <div class="sold-card">
       <img src="https://photos.zillowstatic.com/fp/1f5770d55c236ab071f18f2d6935d159-cc_ft_960.jpg" alt="308 Myrtle St, Cliffwood NJ" style="width:100%;height:180px;object-fit:cover;border-radius:8px 8px 0 0;">
       <div class="sold-badge">SOLD</div>

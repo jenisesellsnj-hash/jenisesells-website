@@ -236,6 +236,21 @@ footer .disclaimer { font-size: 11px; color: #66BB6A; margin-top: 20px; max-widt
   .about-text .credentials { justify-content: center; }
   footer .footer-contact { font-size: 13px; }
 }
+/* CURRENT LISTINGS */
+#listings { max-width: 1180px; }
+.listings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+.listing-card { display: flex; flex-direction: column; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0; box-shadow: 0 4px 16px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; }
+.listing-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.14); }
+.listing-card .lc-photo { position: relative; height: 190px; background: linear-gradient(135deg, #2E7D32, #1B5E20); display: flex; align-items: center; justify-content: center; color: #C8A951; font-weight: 700; font-size: 14px; letter-spacing: 1px; }
+.listing-card .lc-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.listing-card .lc-badge { position: absolute; top: 12px; left: 12px; z-index: 1; background: #C8A951; color: #1B5E20; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 12px; }
+.listing-card .lc-body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+.listing-card .lc-price { font-size: 24px; font-weight: 800; color: #1B5E20; line-height: 1.2; }
+.listing-card .lc-addr { font-size: 15px; font-weight: 600; color: #333; margin-top: 2px; }
+.listing-card .lc-specs { font-size: 13px; color: #2E7D32; font-weight: 600; margin: 8px 0; }
+.listing-card .lc-teaser { font-size: 14px; color: #555; flex: 1; }
+.listing-card .lc-link { margin-top: 14px; color: #2E7D32; font-weight: 700; font-size: 14px; }
+@media (max-width: 480px) { .listing-card .lc-photo { height: 200px; } }
 </style>
 </head>
 <body>
@@ -260,6 +275,7 @@ footer .disclaimer { font-size: 11px; color: #66BB6A; margin-top: 20px; max-widt
   <div class="mobile-drawer">
     <a href="#services" onclick="toggleDrawer()">Why Choose Jenise</a>
     <a href="#how-it-works" onclick="toggleDrawer()">How It Works</a>
+    <a href="#listings" onclick="toggleDrawer()">Current Listings</a>
     <a href="#sold" onclick="toggleDrawer()">Recent Sales</a>
     <a href="#testimonials" onclick="toggleDrawer()">Testimonials</a>
     <a href="#cma-form" onclick="toggleDrawer()">Get Your Home Value</a>
@@ -281,7 +297,7 @@ footer .disclaimer { font-size: 11px; color: #66BB6A; margin-top: 20px; max-widt
 <!-- HERO -->
 <div class="hero">
   <div class="hero-text">
-    <h1>Find Out How Much Your Home Is <span class="gold">Worth</span</h1>
+    <h1>Find Out How Much Your Home Is <span class="gold">Worth</span></h1>
     <div class="tagline">Forward. Moving.</div>
     <p>I'm Jenise Buckalew, a NJ State Licensed REALTOR&reg; and independent agent with Green Light Realty LLC. With over 100 homes sold across 20 years in the business, I deliver results — and I'll start with a free, instant Comparative Market Analysis so you know exactly what your home is worth.</p>
     <a href="#cma-form" class="cta-btn">Get Your Free Home Value Report in Minutes &rarr;</a>
@@ -358,6 +374,55 @@ footer .disclaimer { font-size: 11px; color: #66BB6A; margin-top: 20px; max-widt
 </section>
 
 <!-- SOLD HOMES -->
+<!-- CURRENT LISTINGS -->
+<section id="listings">
+  <h2 class="section-title">Current Listings</h2>
+  <p class="section-subtitle">Homes for sale with Jenise right now. Tap any home for photos, details, and to schedule a showing.</p>
+  <div class="listings-grid">
+    <a class="listing-card" href="listing-3-packard-rd-east-brunswick-nj.html">
+      <div class="lc-photo"><span class="lc-badge">For Sale</span>PHOTOS COMING SOON<img src="https://feed-images.rewhosting.com/momls/Photo/Property/20260531233916940239000000/1-5d051e657e82333f0e6ab70122178b7b-l.jpg" alt="3 Packard Rd, East Brunswick NJ" loading="lazy" onerror="this.remove()"></div>
+      <div class="lc-body">
+        <div class="lc-price">$729,900</div>
+        <div class="lc-addr">3 Packard Rd, East Brunswick, NJ</div>
+        <div class="lc-specs">4 Beds &nbsp;&bull;&nbsp; 2 Baths &nbsp;&bull;&nbsp; 2,076 Sq Ft</div>
+        <div class="lc-teaser">Ranch on an oversized lot in Rambling Hills with a private backyard, patio and pond.</div>
+        <div class="lc-link">View details &rarr;</div>
+      </div>
+    </a>
+    <a class="listing-card" href="listing-129-cottrell-rd-old-bridge-nj.html">
+      <div class="lc-photo"><span class="lc-badge">For Sale</span>PHOTOS COMING SOON<img src="https://pi.movoto.com/p/456/2706785R_0_MzRyjq_p.webp" alt="129 Cottrell Rd, Old Bridge NJ" loading="lazy" onerror="this.remove()"></div>
+      <div class="lc-body">
+        <div class="lc-price">$539,900</div>
+        <div class="lc-addr">129 Cottrell Rd, Old Bridge, NJ</div>
+        <div class="lc-specs">3 Beds &nbsp;&bull;&nbsp; 1 Bath &nbsp;&bull;&nbsp; 1,698 Sq Ft</div>
+        <div class="lc-teaser">Updated one-level home on over half an acre with a brand-new kitchen.</div>
+        <div class="lc-link">View details &rarr;</div>
+      </div>
+    </a>
+    <a class="listing-card" href="listing-299-paderewski-ave-perth-amboy-nj.html">
+      <div class="lc-photo"><span class="lc-badge">For Sale</span>PHOTOS COMING SOON<img src="https://pi.movoto.com/p/456/2707483R_0_B3aaEa_p.webp" alt="299 Paderewski Ave, Perth Amboy NJ" loading="lazy" onerror="this.remove()"></div>
+      <div class="lc-body">
+        <div class="lc-price">$490,000</div>
+        <div class="lc-addr">299 Paderewski Ave, Perth Amboy, NJ</div>
+        <div class="lc-specs">3 Beds &nbsp;&bull;&nbsp; 1 Bath &nbsp;&bull;&nbsp; 1,237 Sq Ft</div>
+        <div class="lc-teaser">Move-in ready home renovated in 2021-2022, with an addition and walkout basement.</div>
+        <div class="lc-link">View details &rarr;</div>
+      </div>
+    </a>
+    <a class="listing-card" href="listing-190-college-dr-edison-nj.html">
+      <div class="lc-photo"><span class="lc-badge">For Sale</span>PHOTOS COMING SOON</div>
+      <div class="lc-body">
+        <div class="lc-price">$239,000</div>
+        <div class="lc-addr">190 College Dr, Edison, NJ</div>
+        <div class="lc-specs">2 Beds &nbsp;&bull;&nbsp; 1 Bath &nbsp;&bull;&nbsp; 896 Sq Ft</div>
+        <div class="lc-teaser">Ground-level condo at Mill Pointe with a granite kitchen and community pool.</div>
+        <div class="lc-link">View details &rarr;</div>
+      </div>
+    </a>
+  </div>
+</section>
+<!-- /CURRENT LISTINGS -->
+
 <section id="sold">
   <h2 class="section-title">Recently Sold by Jenise</h2>
   <p class="section-subtitle">Real results from the Zillow profile — verified sales.</p>

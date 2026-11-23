@@ -1,0 +1,78 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; background: #fafafa; }
+a { color: inherit; text-decoration: none; }
+.l-nav { background: #1B5E20; padding: 10px 40px; display: flex; align-items: center; justify-content: space-between; gap: 16px; position: sticky; top: 0; z-index: 100; }
+.l-logo { display: flex; align-items: center; gap: 12px; }
+.l-logo img { height: 64px; }
+.l-logo span { color: #C8A951; font-size: 13px; font-weight: 600; letter-spacing: 1px; }
+.l-nav-links { display: flex; align-items: center; gap: 22px; }
+.l-nav-links a { color: #fff; font-size: 14px; font-weight: 500; }
+.l-nav-links a:hover { color: #C8A951; }
+.l-nav-links .l-phone { background: #C8A951; color: #1B5E20; padding: 8px 18px; border-radius: 25px; font-weight: 700; white-space: nowrap; }
+.l-nav-links .l-phone:hover { color: #1B5E20; background: #d4b96a; }
+.l-wrap { max-width: 1100px; margin: 0 auto; padding: 28px 40px 60px; }
+.l-back { display: inline-block; color: #2E7D32; font-weight: 600; font-size: 14px; margin-bottom: 16px; }
+.l-back:hover { text-decoration: underline; }
+.l-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 18px; }
+.l-status { display: inline-block; background: #2E7D32; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 14px; margin-bottom: 8px; }
+.l-head h1 { font-size: 30px; color: #1B5E20; line-height: 1.2; }
+.l-head .l-town { font-size: 17px; color: #555; }
+.l-price { font-size: 36px; font-weight: 800; color: #2E7D32; line-height: 1; }
+.l-gallery-main { width: 100%; aspect-ratio: 16 / 10; max-height: 600px; border-radius: 14px; overflow: hidden; background: linear-gradient(135deg, #2E7D32, #1B5E20); display: flex; align-items: center; justify-content: center; }
+.l-gallery-main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.l-ph { color: #C8A951; font-weight: 700; font-size: 18px; letter-spacing: 1px; text-align: center; padding: 20px; }
+.l-thumbs { display: flex; gap: 8px; margin-top: 10px; overflow-x: auto; padding-bottom: 4px; }
+.l-thumbs button { flex: 0 0 110px; height: 74px; border: 3px solid transparent; border-radius: 8px; overflow: hidden; padding: 0; cursor: pointer; background: #ddd; }
+.l-thumbs button.on { border-color: #C8A951; }
+.l-thumbs img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.l-note { font-size: 13px; color: #666; font-style: italic; margin-top: 8px; }
+.l-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 6px; }
+.l-chips span { background: #E8F5E9; color: #1B5E20; padding: 10px 16px; border-radius: 8px; font-size: 15px; font-weight: 600; }
+.l-cols { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr); gap: 36px; margin-top: 24px; align-items: start; }
+.l-main h2 { color: #1B5E20; font-size: 22px; margin: 28px 0 12px; }
+.l-main h2:first-child { margin-top: 0; }
+.l-main p { color: #444; font-size: 16px; margin-bottom: 14px; }
+.l-features { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px 24px; }
+.l-features li { position: relative; padding-left: 24px; font-size: 15px; color: #444; }
+.l-features li::before { content: "\2713"; position: absolute; left: 0; color: #2E7D32; font-weight: 700; }
+.l-facts { width: 100%; border-collapse: collapse; }
+.l-facts th, .l-facts td { text-align: left; padding: 10px 0; border-bottom: 1px solid #e6e6e6; font-size: 15px; vertical-align: top; }
+.l-facts th { color: #666; font-weight: 600; width: 38%; padding-right: 12px; }
+.l-map { width: 100%; height: 320px; border: 0; border-radius: 12px; }
+.l-side { position: sticky; top: 104px; }
+.l-card { background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border-top: 5px solid #C8A951; }
+.l-card h3 { color: #1B5E20; font-size: 21px; margin-bottom: 4px; }
+.l-card .l-sub { color: #666; font-size: 14px; margin-bottom: 18px; }
+.l-card label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.l-card input, .l-card textarea { width: 100%; padding: 11px 14px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px; font-family: inherit; margin-bottom: 14px; }
+.l-card input:focus, .l-card textarea:focus { border-color: #2E7D32; outline: none; }
+.l-card button { width: 100%; background: #2E7D32; color: #fff; border: 0; padding: 14px; border-radius: 30px; font-size: 16px; font-weight: 700; cursor: pointer; }
+.l-card button:hover { background: #1B5E20; }
+.l-card button:disabled { background: #999; cursor: not-allowed; }
+.l-or { text-align: center; font-size: 14px; color: #555; margin-top: 14px; }
+.l-or a { color: #2E7D32; font-weight: 700; }
+.l-msg { display: none; padding: 14px; border-radius: 8px; font-size: 15px; margin-top: 12px; }
+.l-msg.ok { display: block; background: #E8F5E9; color: #1B5E20; }
+.l-msg.err { display: block; background: #fdecea; color: #b71c1c; }
+.l-sell { background: #E8F5E9; border-radius: 12px; padding: 20px; margin-top: 18px; font-size: 14px; color: #1B5E20; }
+.l-sell a { font-weight: 700; text-decoration: underline; }
+.l-footer { background: #1B5E20; color: #fff; padding: 40px; text-align: center; }
+.l-footer-name { font-size: 22px; font-weight: 700; color: #C8A951; margin-bottom: 5px; }
+.l-footer-broker { font-size: 14px; color: #A5D6A7; margin-bottom: 15px; }
+.l-footer-contact { font-size: 14px; color: #C8E6C9; }
+.l-disclaimer { font-size: 11px; color: #81C784; margin: 20px auto 0; max-width: 760px; }
+@media (max-width: 860px) {
+  .l-nav { padding: 8px 15px; }
+  .l-logo img { height: 50px; }
+  .l-logo span { display: none; }
+  .l-nav-links { gap: 12px; }
+  .l-nav-links a { font-size: 13px; }
+  .l-nav-links a:nth-child(2) { display: none; }
+  .l-wrap { padding: 18px 16px 40px; }
+  .l-head h1 { font-size: 24px; }
+  .l-price { font-size: 28px; }
+  .l-cols { grid-template-columns: 1fr; gap: 28px; }
+  .l-side { position: static; }
+  .l-thumbs button { flex-basis: 84px; height: 58px; }
+  .l-footer { padding: 30px 20px; }
+}

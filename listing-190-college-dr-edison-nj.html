@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>190 College Dr, Edison NJ | $239,000 | Jenise Buckalew, REALTOR</title>
+<meta name="description" content="2 bed, 1 bath home for sale at 190 College Dr, Edison, NJ 08817. Ground-level condo at Mill Pointe with a granite kitchen and community pool. Listed by Jenise Buckalew, Green Light Realty LLC.">
+<meta property="og:title" content="190 College Dr, Edison NJ - $239,000">
+<meta property="og:description" content="Ground-level condo at Mill Pointe with a granite kitchen and community pool.">
+
+<link rel="stylesheet" href="listings.css">
+</head>
+<body>
+<nav class="l-nav">
+  <a class="l-logo" href="index.html"><img src="logo.png" alt="Green Light Realty LLC"><span>FORWARD. MOVING.</span></a>
+  <div class="l-nav-links">
+    <a href="index.html#listings">All Listings</a>
+    <a href="index.html#cma-form">Get Your Home Value</a>
+    <a href="tel:3473935993" class="l-phone">(347) 393-5993</a>
+  </div>
+</nav>
+<div class="l-wrap">
+  <a class="l-back" href="index.html#listings">&larr; Back to all listings</a>
+  <div class="l-head">
+    <div>
+      <span class="l-status">For Sale</span>
+      <h1>190 College Dr</h1>
+      <div class="l-town">Edison, NJ 08817</div>
+    </div>
+    <div class="l-price">$239,000</div>
+  </div>
+  <div class="l-gallery-main"><div class="l-ph">Photos coming soon</div></div>
+  <div class="l-chips"><span>2 Beds</span><span>1 Full Bath</span><span>896 Sq Ft</span><span>Ground Level</span></div>
+  <div class="l-cols">
+    <div class="l-main">
+      <h2>Ground-level condo close to everything in Edison</h2>
+      <p>This well-maintained two-bedroom condo at Mill Pointe is on the ground level and backs to Middlesex County College, in a spot tucked away from the main drive for extra privacy.</p><p>A long foyer separates the primary bedroom from the rest of the home. The country kitchen has granite countertops and a recently installed dishwasher.</p><p>The community has a pool, and the location works well for commuters, with the train, public transit, and shopping all nearby.</p>
+      <h2>Highlights</h2>
+      <ul class="l-features"><li>Ground-level unit</li><li>Two bedrooms, one full bath</li><li>Country kitchen with granite countertops</li><li>Recently installed dishwasher</li><li>Private primary bedroom off a long foyer</li><li>Community pool</li><li>Near train, public transit and shopping</li></ul>
+      <h2>Property Details</h2>
+      <table class="l-facts"><tr><th>Property type</th><td>Condo</td></tr><tr><th>Year built</th><td>1977</td></tr><tr><th>Community</th><td>Mill Pointe Condominiums</td></tr><tr><th>MLS #</th><td>2700375R</td></tr></table>
+      <h2>Location</h2>
+      <iframe class="l-map" loading="lazy" title="Map of 190 College Dr, Edison, NJ 08817" src="https://www.google.com/maps?q=190+College+Dr%2C+Edison%2C+NJ+08817&output=embed"></iframe>
+    </div>
+    <aside class="l-side">
+      <div class="l-card">
+        <h3>Schedule a Showing</h3>
+        <div class="l-sub">190 College Dr, Edison, NJ 08817</div>
+        <form id="showingForm" action="https://formspree.io/f/xkovdywn" method="POST">
+          <input type="hidden" name="_subject" value="Showing request: 190 College Dr, Edison, NJ 08817">
+          <input type="hidden" name="request_type" value="Showing request (buyer)">
+          <input type="hidden" name="property" value="190 College Dr, Edison, NJ 08817">
+          <label for="f-name">Name</label><input id="f-name" name="name" type="text" required autocomplete="name">
+          <label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" required autocomplete="tel">
+          <label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email">
+          <label for="f-when">Preferred day and time</label><input id="f-when" name="preferred_time" type="text" placeholder="e.g. Saturday morning">
+          <label for="f-msg">Questions or comments</label><textarea id="f-msg" name="message" rows="3"></textarea>
+          <button type="submit">Request a Showing</button>
+          <div id="lMsg" class="l-msg" role="status"></div>
+        </form>
+        <div class="l-or">Or call or text Jenise: <a href="tel:3473935993">(347) 393-5993</a><br>Se habla espa&ntilde;ol</div>
+      </div>
+      <div class="l-sell">Thinking of selling your own home? <a href="index.html#cma-form">Get a free home value report</a>.</div>
+    </aside>
+  </div>
+</div>
+<footer class="l-footer">
+  <div class="l-footer-name">Jenise Buckalew, REALTOR&reg;</div>
+  <div class="l-footer-broker">Licensed Real Estate Salesperson | NJ License #0676823<br>Independent Agent with Green Light Realty LLC</div>
+  <div class="l-footer-contact">Cell: (347) 393-5993 &nbsp;|&nbsp; Office: (732) 251-2500 ext 714<br>jenisesellsnj@gmail.com</div>
+  <div class="l-disclaimer">Listed by Jenise Buckalew, Green Light Realty LLC, 1109 Englishtown Rd, Old Bridge, NJ 08857. Office: (732) 251-2500 ext 714. Listing information is deemed reliable but not guaranteed and is subject to change, prior sale, or withdrawal without notice. Buyers should verify all information independently. Equal Housing Opportunity.</div>
+</footer>
+<script>
+(function () {
+  var main = document.getElementById('lMain');
+  var thumbs = document.querySelectorAll('.l-thumbs button');
+  function ph(el) { var d = document.createElement('div'); d.className = 'l-ph'; d.textContent = 'Photos coming soon'; el.replaceWith(d); }
+  if (main) main.addEventListener('error', function () { ph(main); });
+  thumbs.forEach(function (b) {
+    var im = b.querySelector('img');
+    im.addEventListener('error', function () { b.remove(); });
+    b.addEventListener('click', function () {
+      var m = document.getElementById('lMain'); if (!m) return;
+      m.src = im.src;
+      thumbs.forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on');
+    });
+  });
+  var form = document.getElementById('showingForm'), msg = document.getElementById('lMsg');
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var btn = form.querySelector('button'); btn.disabled = true; btn.textContent = 'Sending...';
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function (r) { if (!r.ok) throw new Error(); form.reset(); btn.style.display = 'none';
+        msg.className = 'l-msg ok'; msg.textContent = 'Thank you! Your request was sent. Jenise will reach out shortly to confirm a time.'; })
+      .catch(function () { btn.disabled = false; btn.textContent = 'Request a Showing';
+        msg.className = 'l-msg err'; msg.textContent = 'Something went wrong. Please call or text (347) 393-5993.'; });
+  });
+})();
+</script>
+</body>
+</html>
